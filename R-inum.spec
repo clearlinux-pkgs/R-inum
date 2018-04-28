@@ -4,7 +4,7 @@
 #
 Name     : R-inum
 Version  : 1.0.0
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/inum_1.0-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/inum_1.0-0.tar.gz
 Summary  : Interval and Enum-Type Representation of Vectors
