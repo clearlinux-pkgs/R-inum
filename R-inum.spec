@@ -4,7 +4,7 @@
 #
 Name     : R-inum
 Version  : 1.0.0
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/inum_1.0-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/inum_1.0-0.tar.gz
 Summary  : Interval and Enum-Type Representation of Vectors
@@ -12,7 +12,7 @@ Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-libcoin
 BuildRequires : R-libcoin
-BuildRequires : clr-R-helpers
+BuildRequires : buildreq-R
 
 %description
 of intervals, including a method of coercing variables in data frames.
@@ -25,11 +25,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523310265
+export SOURCE_DATE_EPOCH=1552834018
 
 %install
+export SOURCE_DATE_EPOCH=1552834018
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523310265
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -64,8 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library inum|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  inum || :
 
 
 %files
@@ -90,3 +89,5 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/inum/help/paths.rds
 /usr/lib64/R/library/inum/html/00Index.html
 /usr/lib64/R/library/inum/html/R.css
+/usr/lib64/R/library/inum/tests/regtest.R
+/usr/lib64/R/library/inum/tests/regtest.Rout.save
