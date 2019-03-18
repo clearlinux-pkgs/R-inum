@@ -4,14 +4,15 @@
 #
 Name     : R-inum
 Version  : 1.0.0
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/inum_1.0-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/inum_1.0-0.tar.gz
 Summary  : Interval and Enum-Type Representation of Vectors
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-libcoin
+Requires: R-mvtnorm
 BuildRequires : R-libcoin
+BuildRequires : R-mvtnorm
 BuildRequires : buildreq-R
 
 %description
@@ -25,10 +26,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552834018
+export SOURCE_DATE_EPOCH=1552892804
 
 %install
-export SOURCE_DATE_EPOCH=1552834018
+export SOURCE_DATE_EPOCH=1552892804
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
