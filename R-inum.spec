@@ -4,7 +4,7 @@
 #
 Name     : R-inum
 Version  : 1.0.1
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/inum_1.0-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/inum_1.0-1.tar.gz
 Summary  : Interval and Enum-Type Representation of Vectors
@@ -13,6 +13,7 @@ License  : GPL-2.0
 Requires: R-libcoin
 BuildRequires : R-libcoin
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 of intervals, including a method of coercing variables in data frames.
@@ -25,10 +26,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563493919
+export SOURCE_DATE_EPOCH=1571847790
 
 %install
-export SOURCE_DATE_EPOCH=1563493919
+export SOURCE_DATE_EPOCH=1571847790
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
