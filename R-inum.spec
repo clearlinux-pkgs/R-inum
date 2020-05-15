@@ -4,7 +4,7 @@
 #
 Name     : R-inum
 Version  : 1.0.1
-Release  : 27
+Release  : 28
 URL      : https://cran.r-project.org/src/contrib/inum_1.0-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/inum_1.0-1.tar.gz
 Summary  : Interval and Enum-Type Representation of Vectors
@@ -13,28 +13,28 @@ License  : GPL-2.0
 Requires: R-libcoin
 BuildRequires : R-libcoin
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 of intervals, including a method of coercing variables in data frames.
 
 %prep
 %setup -q -c -n inum
+cd %{_builddir}/inum
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571847790
+export SOURCE_DATE_EPOCH=1589575756
 
 %install
-export SOURCE_DATE_EPOCH=1571847790
+export SOURCE_DATE_EPOCH=1589575756
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
